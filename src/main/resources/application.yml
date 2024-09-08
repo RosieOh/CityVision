@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: cityvision
+
+  datasource:
+    url: jdbc:log4jdbc:mariadb://localhost:3306/cityvision
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  server:
+    port: 8080
+
+  # ?? ??
+  logging:
+    level:
+      root: INFO # ?? ?? ?? ?? (DEBUG, INFO, WARN, ERROR)
+      org.hibernate.SQL: DEBUG # SQL ??? ?? ?? ?? ??
+      org.springframework.web: INFO # Spring ? ?? ?? ??
+
+  # ??? ??
+  spring:
+    jackson:
+      time-zone: Asia/Seoul # ??? ??
+
+
+  # ???? ??
+  scheduler:
+    traffic-data-fetch:
+      cron: "0 0/30 * * * *" # ? 30??? ?? ??? ??
+
+
+  # API ?? (?: ???? ??? API)
+#  transport-api:
+#    base-url:
+#    api-key:
+
+
+
