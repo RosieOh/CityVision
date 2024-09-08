@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:log4jdbc:mariadb://localhost:3306/cityvision
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
